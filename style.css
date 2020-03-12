@@ -1,0 +1,386 @@
+.center {
+    justify-content: space-around;
+}
+
+.group {
+    justify-content: space-between;
+}
+
+.help {
+    justify-content: flex-end;
+}
+
+.x-larger {
+    font-size: x-large;
+    text-shadow: 1px 1px black
+}
+
+.logo img {
+    width: 30%;
+}
+
+.larger {
+    font-size: larger;
+}
+
+.large {
+    font-size: large;
+}
+
+.small {
+    font-size: small;
+    font-weight: 700;
+}
+
+.second-color {
+    color: #cbcbcb
+}
+
+.highlight {
+    color: #e8887e
+}
+
+.font-weight-5 {
+    font-weight: 500
+}
+
+.msg-info span:nth-child(1) {
+    padding-right: 5px;
+    border-right: 1px solid black;
+}
+
+.small-media-tab {
+    display: none;
+}
+
+.small-screen-header {
+    display: none;
+}
+
+.closebtn {
+    display: none;
+}
+
+.back {
+    display: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1010px) {
+    .back {
+        display: block;
+    }
+    .small-media-tab {
+        display: block;
+        width: 100%;
+        justify-content: space-around;
+    }
+    .full-screen-header {
+        display: none;
+    }
+    .small-screen-header {
+        display: flex;
+        justify-content: space-between;
+    }
+    .user-img {
+        display: flex;
+        justify-content: space-around;
+    }
+    .user-img img {
+        width: 28%
+    }
+    .user-img span {
+        cursor: pointer;
+    }
+    .user-profile {
+        color: white
+    }
+    .user-profile h2 {
+        padding: 8px
+    }
+    .user-profile img {
+        border-radius: 40px
+    }
+    .side-nav span {
+        cursor: pointer;
+    }
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: -10%;
+        background-color: #111;
+        overflow: hidden;
+        transition: 0.5s;
+        text-align: center;
+    }
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+    .closebtn {
+        display: block;
+    }
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 1%;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+    .contact {
+        display: block;
+    }
+    .message {
+        display: none
+    }
+    .top-nav {
+        display: none !important;
+    }
+}
+
+.side-nav h3 {
+    max-width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 7px;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: #101010;
+    background-color: transparent;
+    border-bottom: 2px solid #eb988f;
+    border-radius: 0;
+}
+
+.nav-pills .nav-link {
+    border-radius: .25rem;
+    color: #cbcbcb;
+    font-size: large;
+    font-weight: 700;
+}
+
+.side-nav .active {
+    background: #e8887e;
+    color: white;
+}
+
+.chat {
+    padding: 0;
+}
+
+.contacts_body {
+    padding: 0;
+    overflow-y: auto;
+    white-space: nowrap;
+}
+
+.msg_card_body {
+    overflow-y: auto;
+}
+
+.card-header {
+    border-bottom: 1px solid #ea7171;
+    padding: 0;
+}
+
+.card-header a {
+    color: #111;
+    opacity: 0.9;
+}
+
+.card-header a:hover {
+    color: black;
+    opacity: 1;
+}
+
+.message .card .card-header {
+    justify-content: space-between;
+}
+
+.card-footer {
+    border-radius: 0 0 15px 15px;
+    border-top: 0;
+}
+
+.msg-option {
+    font-size: small;
+    padding-top: 2px;
+    padding-bottom: 4px;
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 10px;
+}
+
+
+}
+.msg-option span {
+    padding: 4px
+}
+.type_msg {
+    background-color: white;
+    color: black;
+    height: 48px;
+    overflow-y: auto;
+    padding-left: 11%;
+    border-radius: 10px;
+}
+.attach_btn {
+    background-color: #ea7171;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 30px;
+    padding: 8px;
+    height: 30px;
+    margin-top: 2%;
+    position: absolute;
+    left: 7%;
+}
+.send_btn {
+    background-color: rgb(234, 113, 113);
+    border: 0;
+    color: white;
+    cursor: pointer;
+    border-radius: 14px;
+    position: absolute;
+    right: 26px;
+    bottom: 7%;
+}
+.contacts {
+    list-style: none;
+    padding: 0;
+}
+.contacts li {
+    width: 100% !important;
+    padding: 5px 10px;
+    padding-bottom: 15px;
+    border-bottom: 1.5px solid #ea7171;
+    background: #e6eaef1c;
+}
+.msg {
+    margin-bottom: -4%
+}
+.msg-info {
+    font-size: smaller;
+}
+.contacts .active {
+    background-color: #9c909021;
+}
+.user_img {
+    height: 50px;
+    width: 50px;
+    border: 1.5px solid #f5f6fa;
+}
+.user_img_msg {
+    height: 35px;
+    width: 35px;
+    border: 1.5px solid #f5f6fa;
+}
+.img_cont {
+    position: relative;
+    height: 70px;
+    width: 70px;
+}
+.img_cont_msg {
+    height: 40px;
+    width: 40px;
+}
+.user_info {
+    cursor: pointer;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 15px;
+}
+.user_info p {
+    font-size: 10px;
+    color: black;
+}
+.msg_cotainer {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    border-radius: 25px;
+    background-color: #f2f1f1;
+    padding: 10px;
+    position: relative;
+}
+.msg_cotainer_send {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
+    border-radius: 25px;
+    background-color: #f7d3d3c9;
+    padding: 10px;
+    position: relative;
+}
+.msg_time {
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    color: #0000004f;
+    font-size: 10px;
+}
+.msg_time_send {
+    position: absolute;
+    right: 0;
+    bottom: -15px;
+    color: #0000004f;
+    font-size: 10px;
+}
+
+/*.msg_head{
+    position: relative;
+  }*/
+#action_menu_btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+.action_menu {
+    z-index: 1;
+    position: absolute;
+    padding: 15px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 15px;
+    top: 30px;
+    right: 15px;
+    display: none;
+}
+.action_menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.action_menu ul li {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+}
+.action_menu ul li i {
+    padding-right: 10px;
+}
+.action_menu ul li:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+@media(max-width: 576px) {
+    .contacts_card {
+        margin-bottom: 15px !important;
+    }
+}

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>
+      messeage screen
+    </title>
+</head>
+
+<body>
+      <!-- Header section Start -->
+    <header>
+        <div class="container">
+
+          <!-- full screen top header start -->
+
+            <div class="row bg-white full-screen-header">
+              <!-- logo start -->
+                <div class="col-sm-3 align-self-center">
+                    <a href="index.html" class="logo"><img src="img/logo.png" class="img-fluid"></a>
+                </div>
+                <!-- logo end -->
+
+                <!-- main message tabs starts -->
+                <div class="col-sm-5 align-self-center">
+                    
+                    <ul class="nav nav-pills nav-justified">
+                        <li class="nav-item">
+                            <a class="nav-link " data-toggle="tab" href="#home"><img src="icons/users.svg"> Groups</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link active " data-toggle="tab" href="#menu1"><img src="icons/message-square-red.svg"> Message </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#menu2"><img src="icons/video.svg"> video call</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- main messege tabs end -->
+
+                 <!-- some important tools for user starts -->
+
+                <div class="col-sm-4 d-flex help align-self-center">
+                    <span class="mx-2"><img src="icons/help-circle.svg"></span>
+                    <span class="mx-2"><img src="icons/bell.svg"></span>
+                    <span class="ml-2 d-flex"><img src="img/i-1.png" class="img-fluid" style="width: 15%"><h2 class="small align-self-center px-2">Robin Wang</h2>
+                    <img src="icons/chevron-down.svg"></span>
+                </div>
+                 <!-- some important tools for user starts -->
+            </div>
+            <!-- full screen top header ends -->
+
+            <!-- small screen top header start -->
+            <div class="small-screen-header">
+                <div class="align-self-center">
+                    <a href="index.html" class="logo"><img src="img/logo.png" class="img-fluid w-50"></a>
+                </div>
+                <div class="user-img">
+                    <img src="img/i-1.png" class="img-fluid">
+                    <span class="small align-self-center px-1" onclick="openNav()">Robin Wang</span>
+                    <!-- <img src="icons/chevron-down.svg"></span> -->
+                </div>
+            </div>
+            <!-- small screen top header start -->
+        </div>
+    </header>
+      <!-- Header section End -->
+
+      <!-- main section of the page starts -->
+    <main>
+        <div class="container">
+            <div class="row badge-light">
+              <!-- small screen chat content start -->
+                <div class="small-media-tab">
+                    <ul class="nav nav-pills nav-justified">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#chat" onclick="chat()"><img src="icons/message-square-red.svg"> Chats </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- small screen chat content start -->
+
+                <!-- side nav starts -->
+                <div class="col-lg-2 full-screen-user-profile text-center sidenav" id="mySidenav">
+                    <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="user-profile py-4">
+                        <img src="img/i-1.png" class="img-fluid">
+                        <h2 class="larger">Robin Wang</h2>
+                        <p><small>Life start at the end of your<br> comfort zone   </small> </p>
+                    </div>
+
+                    <div id="accordion" class="side-nav ">
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                                    <h3 class="mt-2 px-2 py-1 active larger">
+                          <img src="icons/message-square.svg">
+                          Messages
+                        </h3>
+
+                                </a>
+                            </div>
+                            <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                                <div class="card-body">
+                                    <span class="d-block highlight font-weight-5 py-2">Chats</span>
+                                    <span class="d-block second-color font-weight-5 py-2 ">Send Message</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                                    <h3 class="mt-2 px-2 py-1 larger  badge-light"><img src="icons/users.svg" class="mr-4">Groups</h3>
+                                </a>
+                            </div>
+                            <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                                <div class="card-body">
+                                    <span class="d-block second-color font-weight-5 py-2 ">History</span>
+                                    <span class="d-block second-color font-weight-5 py-2">Create Groups</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                                    <h3 class="mt-2 p-1 larger  badge-light">
+                        <img src="icons/video.svg" class="px-1">Video Calls</h3>
+                                </a>
+                            </div>
+                            <div id="collapseThree" class="collapse" data-parent="#accordion">
+                                <div class="card-body">
+                                    <span class="d-block second-color font-weight-5 py-2">History</span>
+                                    <span class="d-block second-color font-weight-5 py-2">Calls</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--  sidenav ends -->
+                <!-- full screen main container start -->
+                <div class="col-lg-10 ">
+                    <div class="top-nav group d-flex pt-5 pb-2">
+                        <h3 class="x-larger">
+                          <img src="icons/message-square-red.svg" >
+                          Messages
+                        </h3>
+                        <h4><img src="icons/maximize-2.svg"></h4>
+                    </div>
+
+                    <div class="container-fluid h-100">
+
+                        <div class="row  h-100 bg-white tab-content text-center">
+                          <!-- card containing contact details starts -->
+                            <div id="contact" class="col-lg-4 col-xl-5 chat contact">
+                                <div class="card mb-sm-3 mb-md-0 contacts_card">
+                                    <div class="card-header d-flex group p-2 bg-white">
+                                        <h4 class="large">Chats</h4>
+                                        <span class="large">29/30</span>
+                                    </div>
+                                    <div class="card-body contacts_body">
+                                        <ul class="contacts">
+                                            <li class="active">
+                                                <div class="d-flex bd-highlight">
+                                                    <div class="img_cont">
+                                                        <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img">
+
+                                                    </div>
+                                                    <div class="user_info" onclick="message()">
+
+                                                        <span class="highlight larger font-weight-5">Taherah Big</span>
+                                                        <p>Taherah left 7 mins ago</p>
+                                                    </div>
+
+                                                </div>
+                                                <div class="d-flex justify-content-between msg">
+                                                    <div class="msg-info align-self-center">
+                                                        <span>19 Jan,2018</span>
+                                                        <span>03:49</span>
+                                                    </div>
+                                                    <div class="msg-info align-self-center">
+                                                        <span><img src="icons/eye.svg"> 20 Replies</span>
+                                                        <span><img src="icons/bar-chart-2-small.svg">290/300</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex bd-highlight">
+                                                    <div class="img_cont">
+                                                        <img src="https://2.bp.blogspot.com/-8ytYF7cfPkQ/WkPe1-rtrcI/AAAAAAAAGqU/FGfTDVgkcIwmOTtjLka51vineFBExJuSACLcBGAs/s320/31.jpg" class="rounded-circle user_img">
+
+                                                    </div>
+                                                    <div class="user_info">
+                                                        <span class="font-weight-5">Taherah Big</span>
+                                                        <p>Taherah left 7 mins ago</p>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between msg">
+                                                    <div class="msg-info align-self-center">
+                                                        <span>19 Jan,2018</span>
+                                                        <span>03:49</span>
+                                                    </div>
+                                                    <div class="msg-info align-self-center">
+                                                        <span><img src="icons/eye.svg"> 20 Replies</span>
+                                                        <span><img src="icons/bar-chart-2-small.svg">290/300</span>
+                                                    </div>
+                                                </div>
+
+                                            </li>
+                                            <li>
+                                                <div class="d-flex bd-highlight">
+                                                    <div class="img_cont">
+                                                        <img src="https://2.bp.blogspot.com/-8ytYF7cfPkQ/WkPe1-rtrcI/AAAAAAAAGqU/FGfTDVgkcIwmOTtjLka51vineFBExJuSACLcBGAs/s320/31.jpg" class="rounded-circle user_img">
+
+                                                    </div>
+                                                    <div class="user_info">
+                                                        <span class="font-weight-5">Taherah Big</span>
+                                                        <p>Taherah left 7 mins ago</p>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between msg">
+                                                    <div class="msg-info align-self-center">
+                                                        <span>19 Jan,2018</span>
+                                                        <span>03:49</span>
+                                                    </div>
+                                                    <div class="msg-info align-self-center">
+                                                        <span><img src="icons/eye.svg"> 20 Replies</span>
+                                                        <span><img src="icons/bar-chart-2-small.svg">290/300</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex bd-highlight">
+                                                    <div class="img_cont">
+                                                        <img src="https://i.pinimg.com/originals/ac/b9/90/acb990190ca1ddbb9b20db303375bb58.jpg" class="rounded-circle user_img">
+                                                    </div>
+                                                    <div class="user_info">
+                                                        <span class="font-weight-5">Sami Rafi</span>
+                                                        <p>Sami is online</p>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between msg">
+                                                    <div class="msg-info align-self-center">
+                                                        <span>19 Jan,2018</span>
+                                                        <span>03:49</span>
+                                                    </div>
+                                                    <div class="msg-info align-self-center">
+                                                        <span><img src="icons/eye.svg"> 20 Replies</span>
+                                                        <span><img src="icons/bar-chart-2-small.svg">290/300</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex bd-highlight">
+                                                    <div class="img_cont">
+                                                        <img src="https://static.turbosquid.com/Preview/001214/650/2V/boy-cartoon-3D-model_D.jpg" class="rounded-circle user_img">
+
+                                                    </div>
+                                                    <div class="user_info">
+                                                        <span class="font-weight-5">Nargis Hawa</span>
+                                                        <p>Nargis left 30 mins ago</p>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between msg">
+                                                    <div class="msg-info align-self-center">
+                                                        <span>19 Jan,2018</span>
+                                                        <span>03:49</span>
+                                                    </div>
+                                                    <div class="msg-info align-self-center">
+                                                        <span><img src="icons/eye.svg"> 20 Replies</span>
+                                                        <span><img src="icons/bar-chart-2-small.svg">290/300</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex bd-highlight">
+                                                    <div class="img_cont">
+                                                        <img src="https://static.turbosquid.com/Preview/001214/650/2V/boy-cartoon-3D-model_D.jpg" class="rounded-circle user_img">
+                                                    </div>
+                                                    <div class="user_info">
+                                                        <span class="font-weight-5">Rashid Samim</span>
+                                                        <p>Rashid left 50 mins ago</p>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between msg">
+                                                    <div class="msg-info align-self-center">
+                                                        <span>19 Jan,2018</span>
+                                                        <span>03:49</span>
+                                                    </div>
+                                                    <div class="msg-info align-self-center">
+                                                        <span><img src="icons/eye.svg"> 20 Replies</span>
+                                                        <span><img src="icons/bar-chart-2-small.svg">290/300</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                             <!-- card containing contact details ends -->
+                              <!-- card containing user message start -->
+                            <div class="col-lg-8 col-xl-7 chat w-100 message" id="message">
+                                <div class="card">
+                                    <div class="card-header d-flex bg-white p-2">
+                                        <h5 class="pl-4 large font-weight-bold">
+                                        <img src="icons/code.svg">
+                                        Replies</h5>
+                                        <span class="pl-4 font-weight-bold second-color">
+                                        <img src="icons/bar-chart-2.svg">
+                                        REPORTS</span>
+                                        <span class="back" onclick="chat()" title="back"><img src="icons/skip-back.svg"></span>
+                                    </div>
+                                    <div class="card-body msg_card_body">
+                                        <div class="d-flex justify-content-start mb-4">
+                                            <div class="img_cont_msg">
+                                                <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img_msg">
+                                            </div>
+                                            <div class="msg_cotainer">
+                                                Hi, how are you samim?
+                                                <span class="msg_time">8:40 AM, Today</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-end mb-4">
+                                            <div class="msg_cotainer_send">
+                                                Hi Khalid i am good tnx how about you?
+                                                <span class="msg_time_send">8:55 AM, Today</span>
+                                            </div>
+                                            <div class="img_cont_msg">
+                                                <img src="https://static.turbosquid.com/Preview/001214/650/2V/boy-cartoon-3D-model_D.jpg" class="rounded-circle user_img_msg">
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-start mb-4">
+                                            <div class="img_cont_msg">
+                                                <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img_msg">
+                                            </div>
+                                            <div class="msg_cotainer">
+                                                I am good too, thank you for your chat template
+                                                <span class="msg_time">9:00 AM, Today</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-end mb-4">
+                                            <div class="msg_cotainer_send">
+                                                You are welcome
+                                                <span class="msg_time_send">9:05 AM, Today</span>
+                                            </div>
+                                            <div class="img_cont_msg">
+                                                <img src="https://static.turbosquid.com/Preview/001214/650/2V/boy-cartoon-3D-model_D.jpg" class="rounded-circle user_img_msg">
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-start mb-4">
+                                            <div class="img_cont_msg">
+                                                <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img_msg">
+                                            </div>
+                                            <div class="msg_cotainer">
+                                                I am looking for your next templates
+                                                <span class="msg_time">9:07 AM, Today</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-end mb-4">
+                                            <div class="msg_cotainer_send">
+                                                Ok, thank you have a good day
+                                                <span class="msg_time_send">9:10 AM, Today</span>
+                                            </div>
+                                            <div class="img_cont_msg">
+                                                <img src="https://static.turbosquid.com/Preview/001214/650/2V/boy-cartoon-3D-model_D.jpg" class="rounded-circle user_img_msg">
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-start mb-4">
+                                            <div class="img_cont_msg">
+                                                <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img_msg">
+                                            </div>
+                                            <div class="msg_cotainer">
+                                                Bye, see you
+                                                <span class="msg_time">9:12 AM, Today</span>
+                                            </div>
+                                        </div>
+                                        <div class="collapse" id="collapseExample">
+                                            <div class="card card-body d-block msg-option">
+                                                <span class="d-inline"><img src="icons/volume-2.svg"> Audio</span>
+                                                <span class="d-inline"><img src="icons/video-small.svg">Video</span>
+                                                <span class="d-inline"><img src="icons/type.svg">Text</span>
+                                                <span class="d-inline"><img src="icons/image.svg">Images</span>
+                                                <span class="d-inline"><img src="icons/mic.svg">TTS</span>
+                                                <span class="d-inline"><img src="icons/film.svg">Audio & Text</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <button class="input-group-text attach_btn" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" id="attachment"><i class="fa fa-plus"></i></span>
+                                            </button>
+                                            <input type="text" class="form-control type_msg" placeholder="Type your message...">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text send_btn"><i class="fa fa-location-arrow pr-2"></i> Send</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- card containing user messsages ends -->
+
+                        </div>
+                    </div>
+
+                </div>
+                 <!-- full screen main container ends -->
+            </div>
+        </div>
+    </main>
+    <!-- main section of the page ends -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      // code to toggle the attachment buttun in the message section
+        $('#attachment').click(function() {
+            $(this).find('i').toggleClass('fa fa-plus').toggleClass('fa fa-close');
+        });
+        // code to open side nav for small devices
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "100%";
+            document.getElementById("mySidenav").style.left = "0";
+        }
+        // code to close side nav for small devices
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("mySidenav").style.left = "-10%";
+        }
+        // code to chage message card  to contact card 
+        function chat() {
+            document.getElementById("contact").style.display = " block";
+            document.getElementById("message").style.display = "none";
+        }
+        // code to chage contact card  to message card
+        function message() {
+            document.getElementById("message").style.display = "block";
+            document.getElementById("contact").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
